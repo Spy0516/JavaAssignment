@@ -22,9 +22,10 @@ public class BabyService {
 
     public static List<Integer> listBabyByAge() throws ParseException {
         for (Baby baby : babies) {
-            ages.add(baby.howOld() - 1900);
+            ages.add(baby.howOld()/365);
         }
-
+        
+            
         Collections.sort(ages);
 
         return ages;

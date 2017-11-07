@@ -27,21 +27,12 @@ public class Gift {
     }
 
     public Date getWhenGave() {
-
-        int month;
-        int year;
-        year = whenGave.getYear() - 1900;
-        whenGave.setYear(year);
-
-        month = whenGave.getMonth() - 1;
-        whenGave.setMonth(month);
-
         return whenGave;
     }
 
     @Override
     public String toString() {
-        return "Gift{" + "whoGave=" + whoGave + ", description=" + description + ", whenGave=" + whenGave + '}';
+        return whoGave + " gave " + description + " in " + whenGave;
     }
 
 }
